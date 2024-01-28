@@ -1,4 +1,4 @@
-module github.com/olliefr/docker-gs-ping
+module github.com/olliefr/docker-conifer
 
 go 1.19
 

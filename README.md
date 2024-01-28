@@ -1,16 +1,16 @@
-# docker-gs-ping
+# docker-conifer
 
 A simple Go server/microservice example for [Docker's Go Language Guide](https://docs.docker.com/language/golang/).
 
 Notable features:
 
-* Includes a [multi-stage `Dockerfile`](https://github.com/olliefr/docker-gs-ping/blob/main/Dockerfile.multistage).
+* Includes a [multi-stage `Dockerfile`](https://github.com/olliefr/docker-conifer/blob/main/Dockerfile.multistage).
 * Has a CI pipeline using GitHub Actions to run tests.
 * Has a CD pipeline using GitHub Actions to publish to Docker Hub.
 
 ## Want _moar_?!
 
-There is a more advanced example in [olliefr/docker-gs-ping-roach](https://github.com/olliefr/docker-gs-ping-roach) using [CockroachDB](https://github.com/cockroachdb/cockroach).
+There is a more advanced example in [olliefr/docker-conifer-roach](https://github.com/olliefr/docker-conifer-roach) using [CockroachDB](https://github.com/cockroachdb/cockroach).
 
 ## Contributing
 
