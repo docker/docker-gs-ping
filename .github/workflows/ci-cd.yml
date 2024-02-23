@@ -69,3 +69,15 @@ jobs:
           labels: ${{ steps.meta.outputs.labels }}
           cache-from: type=local,src=/tmp/.buildx-cache
           cache-to:   type=local,dest=/tmp/.buildx-cache
+
+      - name: Deploy to EKS
+        uses: peymanmortazavi/eks-helm-deploy@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS__KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: eu-west-1
+          cluster-name: my-eks
+          namespace: default
+          name: actions-test
+          chart-path: actions-test
+
