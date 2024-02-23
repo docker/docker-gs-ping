@@ -71,7 +71,7 @@ jobs:
           cache-to:   type=local,dest=/tmp/.buildx-cache
 
       - name: Deploy to EKS
-        uses: peymanmortazavi/eks-helm-deploy@v1
+        uses: bitovi/github-actions-deploy-eks-helm@v1.2.9
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS__KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -79,5 +79,5 @@ jobs:
           cluster-name: my-eks
           namespace: default
           name: actions-test
-          chart-path: actions-test
+          chart-path: actions-test/
 
