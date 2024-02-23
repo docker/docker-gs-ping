@@ -83,7 +83,7 @@ jobs:
         with:
           mask-password: 'true'
           registry-type: public
-          registries: ${{ secrets.AWS_ACCOUNT_ID }}.dkr.ecr.${{ secrets.AWS_REGION }}.amazonaws.com
+          registries: public.ecr.aws/o7n4y0z8/feistyeric
 
 
       - name: Deploy to EKS
