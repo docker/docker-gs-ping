@@ -2,7 +2,10 @@
 
 This repo is forked from docker/docker-gs-ping and uses bitovi/github-actions-deploy-eks-helm@v1.2.9 to push the created container to eks via helm.
 
-The helm charts can be found in the docker-gs-ping/actions-test folder which was created using helm create. 
+dockerhub endpoint:
+https://hub.docker.com/repository/docker/bjrooney/docker-gs-ping
+
+The helm charts can be found in the docker-gs-ping/actions-test folder which was created using helm create.
 
 to test the deployment:
 
