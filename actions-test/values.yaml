@@ -45,7 +45,7 @@ service:
   targetPort: 8080
 
 ingress:
-  enabled: 
+  enabled: true
   className: ""
   annotations: 
     kubernetes.io/ingress.class: nginx
