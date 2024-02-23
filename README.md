@@ -8,11 +8,17 @@ to test the deployment:
 
 ➜  ~ curl http://eks.topsoilsystems.com
 Hello, Docker! <3%
+
+
 ➜  ~ curl http://eks.topsoilsystems.com/health
 {"Status":"OK"}
 
 Terraform to create the eks cluster is here:
 docker-gs-ping/eks_cluster
+
+Github actions here:
+
+.github/workflows
 
 
 A simple Go server/microservice example for [Docker's Go Language Guide](https://docs.docker.com/language/golang/).
