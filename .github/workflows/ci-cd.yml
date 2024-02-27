@@ -84,7 +84,7 @@ jobs:
           access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           region: ${{ secrets.AWS_REGION }}
-          local-image: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ github.event.repository.name }}:main
+          local-image: bjrooney/docker-gs-ping:main
           image: public.ecr.aws/feisty-eric/feistyeric:main
 
       - name: Deploy to EKS
