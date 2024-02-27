@@ -77,6 +77,16 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
 
+      - name: Push to ECR
+        id: ecr
+        uses: jwalton/gh-ecr-push@v1
+        with:
+          access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          region: ${{ secrets.AWS_REGION }}
+          local-image: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ github.event.repository.name }}:main
+          image: public.ecr.aws/feisty-eric/feistyeric:main
+
       - name: Deploy to EKS
         uses: bitovi/github-actions-deploy-eks-helm@v1.2.9
         with:
