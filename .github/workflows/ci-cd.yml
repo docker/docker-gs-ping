@@ -98,5 +98,5 @@ jobs:
           secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           region: ${{ secrets.AWS_REGION }}
           local-image: feistyeric:latest
-          image: public.ecr.aws/feisty-eric/feistyeric:latest
+          image: feisty-eric/feistyeric:latest
 
