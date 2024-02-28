@@ -89,7 +89,7 @@ jobs:
           name: actions-test
           chart-path: actions-test/
 
-      - run: docker build --tag feistyeric:latest .
+      - run: docker build --tag docker-gs-ping:latest .
       - name: Push to ECR
         id: ecr
         uses: jwalton/gh-ecr-push@v1
@@ -97,6 +97,6 @@ jobs:
           access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           region: ${{ secrets.AWS_REGION }}
-          local-image: feistyeric:latest
-          image: feistyeric:latest
+          local-image: docker-gs-ping:latest
+          image: docker-gs-ping:latest
 
