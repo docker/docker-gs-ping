@@ -5,7 +5,7 @@ import (
 	"testing"
 )
 
-// A simple example of unit testing a function.
+// A simple example of unit testing a function. 
 // Adapted from: https://gobyexample.com/testing-and-benchmarking
 
 func TestIntMinBasic(t *testing.T) {
