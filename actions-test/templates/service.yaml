@@ -8,8 +8,11 @@ spec:
   type: {{ .Values.service.type }}
   ports:
     - port: {{ .Values.service.port }}
-      targetPort: http
+      targetPort: {{ .Values.service.targetPort }}
       protocol: TCP
       name: http
   selector:
     {{- include "actions-test.selectorLabels" . | nindent 4 }}
+
+# targetPort: is the port the container accepts traffic on, 
+# port: is the abstracted Service port, which can be any port other pods use to access the Service

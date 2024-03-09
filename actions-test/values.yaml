@@ -39,6 +39,8 @@ securityContext: {}
   # runAsNonRoot: true
   # runAsUser: 1000
 
+# targetPort: is the port the container accepts traffic on, 
+# port: is the abstracted Service port, which can be any port other pods use to access the Service
 service:
   type: ClusterIP
   port: 80
@@ -60,7 +62,7 @@ ingress:
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
-  
+
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
