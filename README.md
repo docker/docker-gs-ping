@@ -1,5 +1,29 @@
 # docker-gs-ping
 
+This repo is forked from docker/docker-gs-ping and uses bitovi/github-actions-deploy-eks-helm@v1.2.9 to push the created container to eks via helm.
+
+dockerhub endpoint:
+https://hub.docker.com/repository/docker/bjrooney/docker-gs-ping
+
+The helm charts can be found in the docker-gs-ping/actions-test folder which was created using helm create.
+
+to test the deployment:
+
+➜  ~ curl http://eks.topsoilsystems.com
+Hello, Docker! <3%
+
+
+➜  ~ curl http://eks.topsoilsystems.com/health
+{"Status":"OK"}
+
+Terraform to create the eks cluster is here:
+docker-gs-ping/eks_cluster
+
+Github actions here:
+
+.github/workflows
+
+
 A simple Go server/microservice example for [Docker's Go Language Guide](https://docs.docker.com/language/golang/).
 
 Notable features:
